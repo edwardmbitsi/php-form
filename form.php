@@ -4,13 +4,14 @@
         $email = $_POST['email'];
         $number = $_POST['number'];
         $relation = $_POST['relation'];
+        $other = $_POST['other'];
         
 
     // database details
-    $host = "localhost:3306";
+    $host = "localhost";
     $username = "exceptio";
     $password = "Ln*-QLoyf5H808";
-    $dbname = "exceptio_testing";
+    $dbname = "exceptio_test";
 
    // Database connection
 	$conn = new mysqli($host,$username,$password,$dbname);
@@ -18,8 +19,8 @@
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
-		$stmt = $conn->prepare("insert into registration(name, surname, email, number, relation) values(?, ?, ?, ?, ?)");
-		$stmt->bind_param("sssis", $name, $surname, $email, $number, $relation);
+		$stmt = $conn->prepare("insert into registration(name, surname, email, number, relation, other) values(?, ?, ?, ?, ?,?)");
+		$stmt->bind_param("sssis", $name, $surname, $email, $number, $relation, $other);
 		$execval = $stmt->execute();
 		echo $execval;
 		echo "Registration successfully...";
