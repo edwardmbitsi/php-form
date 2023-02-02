@@ -5,7 +5,6 @@
         $number = $_POST['number'];
         $relation = $_POST['relation'];
         
-    }
 
     // database details
     $host = "localhost";
