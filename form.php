@@ -1,7 +1,4 @@
 <?php
-    // getting all values from the HTML form
-    if(isset($_POST['submit']))
-    {
         $firstname = $_POST['firstname'];
         $surname = $_POST['surname'];
         $email = $_POST['email'];
