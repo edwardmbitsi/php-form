@@ -1,43 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>  
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
-  <title>PHP Form</title>
-</head>  
-<body>  
-  <div class="container">  
-  <form>
-    
-  <h5>Referee Details</h5>
-    
-   <label for="fname">Referee: First name*</label><br>
-  <input type="text" id="fname" name="fname" autocomplete="off" required><br>
-    
-  <label for="sname">Referee: Surname*</label><br>
-  <input type="text" id="sname" name="sname" autocomplete="off" required><br>
-    
-  <label for="email">Email address*</label><br>
-  <input type="email" id="email" name="email" autocomplete="off" required><br>
-    
-  <label for="number">Phone number*</label><br>
-  <input type="number" id="number" name="number" autocomplete="off"required ><br>
-  
-  <label for="relation">Relation to participant*</label><br>
-  <select id="relation" name="relation" required>
+<div class="container">  
+    <h1>Referee details</h1>  
+      <form action="" id="form" class="form">  
+        <div class="input">  
+         <label for="firstname">Referee: First name*</label>  
+           <input type="text" name="firstname" id="firstname" placeholder="Firstname" autocomplete="off" />  
+      <small>Error message</small>  
+  </div>  
+    <div class="input">  
+         <label for="surname">Referee: Surname*</label>  
+           <input type="text" name="surname" id="surname" placeholder="Surname" autocomplete="off" />  
+      <small>Error message</small>  
+  </div>      
+  <div class="input">  
+    <label for="email">Email address*</label>  
+      <input type="text" name="email" id="email" placeholder="Email" autocomplete="off" />  
+     <small>Error message</small>  
+  </div>  
+  <div class="input">  
+      <label for="number">Phone number*</label>  
+        <input type="number" name="number" id="number" placeholder="Phone number"/>  
+      <small>Error message</small>  
+  </div>  
+      <div class="input">
+        <label for="number">Relation to participant*</label>
+      <select id="relation" name="relation" required>
     <option value="" disabled selected hidden>Select an answer</option>
     <option value="parent">Parent</option>
     <option value="spouse">Spouse</option>
     <option value="friend">Friend</option>
     <option value="sister">Sibling</option>
   </select><br>
-    
-  <label for="other">If other, please describe:</label><br>
-  <input type="text" id="other" name="other" autocomplete="off" ><br>
-    
-  <input type="submit" value="Submit">
-    
-</form>
-</div>    
-</body>  
-</html>  
+        </div>
+        <div class="input">  
+       <label for="other">If other, please describe</label>  
+          <input  type="other" name="other" id="other" placeholder="If other, please describe"/>  
+       <small>Error message</small>  
+  </div>  
+  <button>Submit</button>  
+     </form>  
+   </div>  
