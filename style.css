@@ -31,13 +31,13 @@
  }  
 
  .input {  
-  margin-bottom: 20px;  
+  margin-bottom: 5px;  
   position: relative;  
  } 
 
  .input label {  
   display: block;  
-  margin-bottom: 10px;  
+  margin-bottom: 5px;  
  }  
 
  .input input {  
