@@ -7,7 +7,7 @@
         
 
     // database details
-    $host = "localhost";
+    $host = "localhost:3306";
     $username = "exceptio";
     $password = "Ln*-QLoyf5H808";
     $dbname = "exceptio_testing";
