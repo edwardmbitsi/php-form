@@ -16,26 +16,19 @@
     $password = "Ln*-QLoyf5H808";
     $dbname = "exceptio_testing";
 
-    // creating a connection
-    $con = mysqli_connect($host, $username, $password, $dbname);
-
-    // to ensure that the connection is made
-    if (!$con)
-    {
-        die("Connection failed!" . mysqli_connect_error());
-    }
-
-    // using sql to create a data entry query
-    $sql = "INSERT INTO contactform_entries (id, firstname, surname, email, number, relation) VALUES ('0', '$firstname', '$surname', '$email', '$number', '$relation')";
-  
-    // send query to the database to add values and confirm if successful
-    $rs = mysqli_query($con, $sql);
-    if($rs)
-    {
-        echo "Entries added!";
-    }
-  
-    // close connection
-    mysqli_close($con);
+   // Database connection
+	$conn = new mysqli('localhost','root','','test');
+	if($conn->connect_error){
+		echo "$conn->connect_error";
+		die("Connection Failed : ". $conn->connect_error);
+	} else {
+		$stmt = $conn->prepare("insert into registration(firstname, surname, email, number, relation) values(?, ?, ?, ?, ?, ?)");
+		$stmt->bind_param("sssssi", $firstname, $surname, $email, $number, $relation);
+		$execval = $stmt->execute();
+		echo $execval;
+		echo "Registration successfully...";
+		$stmt->close();
+		$conn->close();
+	}
 
 ?>
