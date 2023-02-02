@@ -11,10 +11,10 @@
     $host = "localhost";
     $username = "exceptio";
     $password = "Ln*-QLoyf5H808";
-    $dbname = "testing";
+    $dbname = "exceptio_testing";
 
    // Database connection
-	$conn = new mysqli('localhost','root','','testing');
+	$conn = new mysqli('localhost','root','','exceptio_testing');
 	if($conn->connect_error){
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
