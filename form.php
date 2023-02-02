@@ -1,5 +1,5 @@
 <?php
-        $firstname = $_POST['firstname'];
+        $name = $_POST['name'];
         $surname = $_POST['surname'];
         $email = $_POST['email'];
         $number = $_POST['number'];
@@ -18,8 +18,8 @@
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
-		$stmt = $conn->prepare("insert into registration(firstname, surname, email, number, relation) values(?, ?, ?, ?, ?)");
-		$stmt->bind_param("sssis", $firstname, $surname, $email, $number, $relation);
+		$stmt = $conn->prepare("insert into registration(name, surname, email, number, relation) values(?, ?, ?, ?, ?)");
+		$stmt->bind_param("sssis", $name, $surname, $email, $number, $relation);
 		$execval = $stmt->execute();
 		echo $execval;
 		echo "Registration successfully...";
