@@ -11,7 +11,7 @@
     $host = "localhost";
     $username = "exceptio";
     $password = "Ln*-QLoyf5H808";
-    $dbname = "exceptio_testing";
+    $dbname = "testing";
 
    // Database connection
 	$conn = new mysqli('localhost','root','','test');
