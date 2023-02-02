@@ -20,7 +20,7 @@
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
 		$stmt = $conn->prepare("insert into registration(name, surname, email, number, relation, other) values(?, ?, ?, ?, ?,?)");
-		$stmt->bind_param("sssis", $name, $surname, $email, $number, $relation, $other);
+		$stmt->bind_param("sssiss", $name, $surname, $email, $number, $relation, $other);
 		$execval = $stmt->execute();
 		echo $execval;
 		echo "Registration successfully...";
