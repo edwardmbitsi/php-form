@@ -2,9 +2,12 @@
     // getting all values from the HTML form
     if(isset($_POST['submit']))
     {
-        $fname = $_POST['fname'];
-        $lname = $_POST['lname'];
+        $firstname = $_POST['firstname'];
+        $surname = $_POST['surname'];
         $email = $_POST['email'];
+        $number = $_POST['number'];
+        $relation = $_POST['relation'];
+        
     }
 
     // database details
@@ -23,7 +26,7 @@
     }
 
     // using sql to create a data entry query
-    $sql = "INSERT INTO contactform_entries (id, fname, lname, email) VALUES ('0', '$fname', '$lname', '$email')";
+    $sql = "INSERT INTO contactform_entries (id, firstname, surname, email, number, relation) VALUES ('0', '$firstname', '$surname', '$email', '$number', '$relation')";
   
     // send query to the database to add values and confirm if successful
     $rs = mysqli_query($con, $sql);
