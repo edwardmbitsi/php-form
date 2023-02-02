@@ -12,9 +12,9 @@
 
     // database details
     $host = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "sampledb";
+    $username = "exceptio";
+    $password = "Ln*-QLoyf5H808";
+    $dbname = "exceptio_wp524";
 
     // creating a connection
     $con = mysqli_connect($host, $username, $password, $dbname);
