@@ -8,7 +8,7 @@
 <body>  
 <div class="container">  
     <h1>Referee details</h1>  
-      <form action="" id="form" class="form">  
+      <form action="form.php" method="POST" id="form" class="form">  
         <div class="input">  
          <label for="firstname">Referee: First name*</label>  
            <input type="text" name="firstname" id="firstname" placeholder="Firstname" autocomplete="off" />  
@@ -44,7 +44,7 @@
           <input  type="other" name="other" id="other" placeholder="If other, please describe"/>  
        <small>Error message</small>  
   </div>  
-  <button>Submit</button>  
+  <input type="submit" name="submit" id="submit" value="Submit">
      </form>  
    </div>  
 </body>  
