@@ -9,7 +9,7 @@
 
     // database details
     $host = "localhost";
-    $username = "exceptio";
+    $username = "root";
     $password = "";
     $dbname = "exceptio_test";
 
